@@ -6,9 +6,9 @@ type Props = {
   width: string
 }
 
-const Avatar = ({image = '10', height = '10', width}: Props) => {
+const Avatar = ({image = 'h-10', height = 'h-10', width}: Props) => {
   return (
-    <img className={`inline-block h-${height} w-${width} rounded-full`} src={image} alt=""></img>
+    <img className={`inline-block ${height} ${width} rounded-full`} src={image} alt=""></img>
   );
 };
 

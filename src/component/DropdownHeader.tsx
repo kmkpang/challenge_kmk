@@ -9,7 +9,7 @@ const DropdownHeader = () => {
       <button 
         type="button" id="menu-button" aria-expanded="true" aria-haspopup="true"
         className="flex w-full justify-center item-center gap-x-1.5 rounded-full bg-[#EEEEEE] px-1 py-1 text-xl text-[#212121] shadow-sm hover:bg-gray-50">
-        <Avatar image={profileImg} height="10" width="10"/>
+        <Avatar image={profileImg} height="h-10" width="h-10"/>
         <div className="w-7 h-full py-2">
           <IoIosArrowDown />
         </div>

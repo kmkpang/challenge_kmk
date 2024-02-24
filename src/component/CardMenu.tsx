@@ -15,15 +15,15 @@ import Menu from "./Menu";
 const CardMenu = () => {
 
   const badges = [
-    { text: "Agent", bgColor: "#0277BD" },
-    { text: "Owner", bgColor: "#4527A0" },
-    { text: "Developer", bgColor: "#F9A825" },
+    { text: "Agent", bgColor: "bg-[#0277BD]" },
+    { text: "Owner", bgColor: "bg-[#4527A0]" },
+    { text: "Developer", bgColor: "bg-[#F9A825]" },
   ]
 
   const RenderBadges = () => {
-    return badges.map(badge => {
+    return badges.map((badge, index) => {
       return (
-        <Badge text={badge.text} bgColor={badge.bgColor} />
+        <Badge key={index} text={badge.text} bgColor={badge.bgColor} />
       )
     })
   }
