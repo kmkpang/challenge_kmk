@@ -23,8 +23,8 @@ const Navbar = () => {
   ];
   return (
     <>
-      <header className="md:px-8 lg:px-20 py-2 z-10 w-full border-b">
-        <nav className="flex justify-between items-center max-container">
+      <nav className="fixed md:px-8 lg:px-20 py-2 z-10 w-full border-b bg-white">
+        <div className="flex justify-between items-center max-container">
           <a href="/" className="">
             <img src={logo} alt="logo" />
           </a>
@@ -68,8 +68,9 @@ const Navbar = () => {
           >
             <RxHamburgerMenu className="text-4xl" />
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+      
       {isMenuOpen && (
         <div>
           <nav className="fixed z-40 top-0 right-0 left-0 bottom-0 lg:bottom-auto bg-slate-100  ">

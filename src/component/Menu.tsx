@@ -1,12 +1,13 @@
 
 import React, { useState } from "react";
 
+import Badge from "./Badge";
+
 // image
 import user from'../assets/image/user-circle.svg'
 import bell from'../assets/image/bell20x20.svg'
 import message from'../assets/image/message-circle20x20.svg'
 import heart from'../assets/image/heart.svg'
-import Badge from "./Badge";
 
 const Menu = () => {
   return (

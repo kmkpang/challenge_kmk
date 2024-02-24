@@ -6,11 +6,11 @@ import Avatar from "./Avatar";
 import Star from "./Star";
 import Badge from "./Badge";
 import Divider from "./Divider";
+import Menu from "./Menu";
 
 // image
 import profileImg from'../assets/image/Picture.png';
 import badge from'../assets/image/Badge.svg';
-import Menu from "./Menu";
 
 const CardMenu = () => {
 
@@ -29,8 +29,8 @@ const CardMenu = () => {
   }
 
   return (
-    <aside id="sidebar" className={`fixed top-30 left-0 sm:w-64 w-full h-screen`} aria-label="Sidebar">
-      <div className="m-10 py-5 right-0 mt-2 sm:w-[300px] w-auto origin-top-right rounded-[20px] bg-white shadow-md focus:outline-none border border-[#E0E0E0]">
+    <div id="sidebar" className={`mt-2 sm:mt-16 block sm:absolute top-30 left-0 sm:w-64 w-full sm:h-screen`} aria-label="Sidebar">
+      <div className="m-10 py-5 right-0 mt-2 sm:w-[300px] w-auto origin-top-right rounded-[20px] bg-white shadow-xl focus:outline-none border border-[#E0E0E0]">
         <div className="py-1 flex justify-center item-center relative">
           <Avatar image={profileImg} height="20" width="20"/>
           <span className="absolute bottom-0 -mr-12 flex h-6 w-6 rounded-full ring-4 ring-white">
@@ -49,7 +49,7 @@ const CardMenu = () => {
         <Divider />
         <Menu />
       </div>
-    </aside>
+    </div>
   );
 };
 
