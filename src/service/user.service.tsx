@@ -9,7 +9,7 @@ export const UserService = {
       console.error('Error :', error);
     }
   },
-  async verifyThaiNationalID(formdata: FormData) {
+  async verifyThaiNationalID(formdata: any) {
     try {
         const data = await APIService.post('PUT','/users/me',formdata);
         return data

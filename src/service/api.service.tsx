@@ -6,13 +6,12 @@ export const APIService = {
     const authorization = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjIsImlhdCI6MTcwODU4NjQ3MiwiZXhwIjoxNzExMTc4NDcyfQ.QdUjkx8leaMjdRoAds6pnxYdd08SeF6Yk9MU0796kJM';
     const headers = {
       Authorization: authorization,
-      "Content-Type": "application/json",
     };
     // Fetch options
     const options = {
       method: typeof method === "string" ? method.toUpperCase() : method, // Specify the HTTP method (GET, POST, PUT, DELETE, etc.)
       headers: headers,
-      body: JSON.stringify(body), // Convert the request data to a JSON string
+      body: body
     };
     const response = await fetch(url, options);
     const data = await response.json();

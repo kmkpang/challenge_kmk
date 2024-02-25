@@ -53,7 +53,6 @@ const Content = () => {
       const reader = new FileReader();
       reader.onloadend = () => {
         if (typeof reader.result === 'string') {
-          console.log('reader.result', reader.result);
           setImageSrc(reader.result);
           setFileInput(file);
         } else {
