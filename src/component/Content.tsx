@@ -33,17 +33,25 @@ const Content = () => {
     getUserInfo()
   }, []);
 
-  const onInputIDNumber = (e: any) => {
-    const value = e.target.value
+  const validateIDNumber = (value: string) => {
     if(value === '') {
       setIDNumberError('Please Fill your Thai National ID number.')
+      return false
     } else if (!/^\d+$/.test(value)) {
       setIDNumberError('Thai National ID number should contain only digits.')
+      return false
     } else if (value.length > 13) {
       setIDNumberError('Thai National ID number should not exceed 13 digits.')
+      return false
     } else {
       setIDNumberError('')
+      return true
     }
+  }
+
+  const onInputIDNumber = (e: any) => {
+    const value = e.target.value
+    validateIDNumber(value)
     setIDNumber(value)
   }
 
@@ -69,12 +77,12 @@ const Content = () => {
       if(!fileInput) {
         setFileInputError(true)
       }
-      if(idNumber === '') {
+      if(idNumber === '' ) {
         setIDNumberError('Please Fill your Thai National ID number.')
       }
     }
 
-    if(idNumber && fileInput) {
+    if(!idNumberError && idNumber && fileInput) {
       const result = await verifyThaiNationalID(idNumber, fileInput)
       if(result) {
         onCloseFormThaiIDCard()
@@ -86,6 +94,7 @@ const Content = () => {
   const onCloseFormThaiIDCard = () => {
     setIDNumber('')
     setIDNumberError('')
+    setImageSrc('')
     setFileInputError(false)
     setOpen(false)
   }
