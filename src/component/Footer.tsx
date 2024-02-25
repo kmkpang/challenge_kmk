@@ -48,7 +48,7 @@ const Footer = () => {
   const renderNavMenu = (menu: any[]) => {
     return menu.map((item, index) => {
       return (
-        <p className="mb-1">
+        <p key={index} className="mb-1">
           <a href={item.href} className="text-white text-sm">{item.label}</a>
         </p>
       )

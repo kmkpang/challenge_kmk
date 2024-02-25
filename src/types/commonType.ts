@@ -1,51 +1,56 @@
-export interface BaseMainRecord {
-  createdAt: string | Date | null;
-  updatedAt: string | Date | null;
-  id: string;
-}
-export interface BaseSubRecord {
-  created_at: string | Date | null;
-  updated_at: string | Date | null;
-  deleted_at: string | Date | null;
-  id: string;
+export interface UserInfoType {
+  id: number;
+  email: string;
+  phoneNumber: string;
+  firstName: string;
+  lastName: string;
+  profilePicture: string;
+  myPropertyCount: number;
+  about: string;
+  currency: string;
+  thaiNationalIdNumber: string;
+  passportNo: string;
+  coverPhoto: string;
+  selfiePhoto: string;
+  passportPhoto: string;
+  thaiNationalIdCardPhoto: string;
+  isVerifyEmail: boolean;
+  isVerifyPhoneNumber: boolean;
+  isVerifyThaiNationalId: boolean;
+  isVerify: boolean;
+  verifyThaiNationalIdStatus: string;
+  createdAt: string;
+  updatedAt: string;
+  lineId: string;
+  whatsAppId: string;
+  weChatId: string;
+  status: string;
+  userTypes: any[]; // assuming userTypes can be of any type
+  privacyPolicies: PrivacyPolicy[];
+  language: Language;
 }
 
-export interface PaginationType<T> {
-  data: T;
-  page: number;
-  per_page: number;
-  total: number;
-  total_page: number;
-}
-
-export type ModalMode = "add" | "edit";
-export type Align = "center" | "start" | "end";
-
-export interface TableHeaderType<T> {
+interface PrivacyPolicy {
+  id: number;
   title: string;
-  align: Align;
-  sortable: boolean;
-  width?: string;
-  key?: keyof T | "";
+  data: string;
+  isAccept: boolean;
+  UserPrivacyPolicy: UserPrivacyPolicy;
 }
 
-export interface ResponseDataType<T> {
-  result: ResultType;
-  data: T;
+interface UserPrivacyPolicy {
+  id: number;
+  userId: number;
+  privacyPolicyId: number;
+  isAccept: boolean;
+  createdAt: string;
+  updatedAt: string;
+  privacy_policy_id: number;
+  user_id: number;
 }
-export interface ResponseListDataType<T> {
-  result: ResultType;
-  data: T[];
-}
-export interface ResponseListDataPaginationType<T> {
-  result: ResultType;
-  data: T[];
-  page: number;
-  per_page: number;
-  total: number;
-  total_page: number;
-}
-export interface ResultType {
-  code: string; // "0000" | "500"
-  message: string;
+
+interface Language {
+  id: number;
+  languageName: string;
+  languageCode: string;
 }

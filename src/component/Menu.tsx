@@ -29,7 +29,7 @@ const Menu = () => {
           </div>
         </div>
         <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-          <Badge text="5" bgColor="#EF6C00"/>
+          <Badge text="5" bgColor="bg-[#EF6C00]"/>
         </div>
       </li>
       <li className="h-9 flex justify-between gap-x-6 items-center rounded-full p-1.5">
@@ -40,7 +40,7 @@ const Menu = () => {
           </div>
         </div>
         <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-          <Badge text="12" bgColor="#EF6C00"/>
+          <Badge text="12" bgColor="bg-[#EF6C00]"/>
         </div>
       </li>
       <li className="h-9 flex justify-between gap-x-6 items-center rounded-full p-1.5">
