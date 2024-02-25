@@ -91,7 +91,7 @@ const ModalThaiIDCard = ({open, idNumber, idNumberError, fileInputError, imageSr
                       </div>
                     </div>
                     <span className="text-red-700 text-xs ml-1">
-                      {fileInputError && 'Please Thai National ID card Photo'}
+                      {fileInputError && 'Please Upload Thai National ID card Photo'}
                     </span>
                     </>
                   }
